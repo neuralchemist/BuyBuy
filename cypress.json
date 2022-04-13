@@ -1,0 +1,9 @@
+{
+  "video": true,
+  "viewportWidth": 1000,
+  "viewportHeight": 1000,
+  "animationDistanceThreshold": 1,
+  "videoCompression": false,
+  "baseUrl": "http://localhost:3000",
+  "chromeWebSecurity": false
+}
