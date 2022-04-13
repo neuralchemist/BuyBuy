@@ -1,5 +1,5 @@
 {
-  "video": true,
+  "video": false,
   "viewportWidth": 1000,
   "viewportHeight": 1000,
   "animationDistanceThreshold": 1,
