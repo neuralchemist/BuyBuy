@@ -11,7 +11,6 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 function Product({ product, onAddToCart }) {
 
-  console.log("%cProduct Rendered", "color: green");
   return (
     <Card sx={{ maxWidth: "100%" }}>
       <CardHeader title={product.name} subheader={`$${product.price}`} />

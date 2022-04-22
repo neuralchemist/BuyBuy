@@ -24,7 +24,6 @@ function StripePayment() {
   // handle payment function
   const handlePayment = async (event) => {
     event.preventDefault();
-    console.log("payment handled");
 
     if (!stripe || !elements) {
       return;

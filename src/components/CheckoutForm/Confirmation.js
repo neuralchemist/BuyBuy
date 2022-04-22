@@ -6,7 +6,6 @@ import { useCart } from "../../context/CartContext";
 
 function Confirmation() {
   const { order } = useCart();
-  console.log("Confirmation: order: ", order);
 
   return (
     <Box mt={2}>

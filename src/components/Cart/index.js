@@ -10,7 +10,6 @@ import { useCart } from "../../context/CartContext";
 function Cart() {
   const { cart } = useCart();
   const isEmpty = cart.items.length === 0;
-  console.log("%cCart Rendered", "color: pink");
 
   return (
     <Container maxWidth="lg" component="main" sx={{ mt: 9 }}>

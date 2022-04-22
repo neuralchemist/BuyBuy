@@ -9,7 +9,6 @@ import { useCart } from "../../context/CartContext";
 function Products() {
   const { products, onAddToCart } = useCart();
 
-  console.log("%cProducts Rendered", "color: orange");
   return (
     <Container maxWidth="lg" component="main" sx={{ mt: 9 }}>
       <Grid container justifyContent="center" spacing={4}>
