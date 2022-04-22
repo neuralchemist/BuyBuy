@@ -32,7 +32,6 @@ export function CartProvider({ children }) {
       }));
     }
 
-    console.log(`${product.id} is added to cart`);
   };
 
   const onEmptyCart = () => {
@@ -41,7 +40,6 @@ export function CartProvider({ children }) {
       subtotal: 0,
       total_items: 0,
     });
-    console.log("cart emptied");
   };
 
   const onRemoveItemFromCart = (product) => {
@@ -51,7 +49,6 @@ export function CartProvider({ children }) {
       total_items: prev.total_items - product.quantity,
     }));
 
-    console.log(`${product.id} is removed from cart`);
   };
 
   const onIncrementItemQuantity = (product) => {
@@ -63,7 +60,6 @@ export function CartProvider({ children }) {
       total_items: prev.total_items + 1,
     }));
 
-    console.log(`${product.id} is incremented in quantity`);
   };
 
   const onDecrementItemQuantity = (product) => {
@@ -78,7 +74,6 @@ export function CartProvider({ children }) {
         total_items: prev.total_items - 1,
       }));
 
-      console.log(`${product.id} is decremented in quantity`);
     }
   };
 

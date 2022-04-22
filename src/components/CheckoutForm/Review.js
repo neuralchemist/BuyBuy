@@ -10,7 +10,6 @@ import { useCart } from "../../context/CartContext";
 function Review() {
   const { cart } = useCart();
 
-  // TODO: verify cart data from backend using useGetCart()
   return (
     <Box mt={3}>
       <Typography variant="h6">Order Summary</Typography>

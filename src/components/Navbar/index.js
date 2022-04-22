@@ -17,7 +17,6 @@ import { CART, HOME } from "../../utils/routes";
 function Navbar() {
   const { cart } = useCart();
 
-  console.log("%cNavbar Rendered", "color: cyan");
   return (
     <AppBar
       position="fixed"
