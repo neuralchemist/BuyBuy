@@ -1,3 +1,4 @@
+import React from "react";
 import { featuredProduct } from "../../DummyData/featuredProducts";
 
 function useGetFeaturedProduct() {

@@ -1,3 +1,4 @@
+import React from "react";
 // mui 5
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
@@ -32,8 +33,12 @@ function FilledCart() {
           justifyContent: "space-between",
         }}
       >
-        <Typography variant="h4">Subtotal: {`$${cart.subtotal.toFixed(2)}`}</Typography>
-        <Box sx={{display: 'flex', flexDirection: {xs: 'column', sm: 'row'}}}>
+        <Typography variant="h4">
+          Subtotal: {`$${cart.subtotal.toFixed(2)}`}
+        </Typography>
+        <Box
+          sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" } }}
+        >
           <Button
             size="medium"
             variant="contained"

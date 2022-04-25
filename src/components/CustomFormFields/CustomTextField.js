@@ -1,10 +1,11 @@
+import React from "react";
 // mui 5
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 // react-hook-form
 import { useFormContext } from "react-hook-form";
 
-function CustomTextField({ type="text", label, name, required }) {
+function CustomTextField({ type = "text", label, name, required }) {
   // react-hook-form
   const {
     register,
@@ -16,6 +17,7 @@ function CustomTextField({ type="text", label, name, required }) {
     margin: "normal",
     fullWidth: true,
   };
+
   return (
     <Grid item xs={12} sm={6}>
       <TextField
@@ -23,7 +25,8 @@ function CustomTextField({ type="text", label, name, required }) {
         label={label}
         required={required}
         error={!!errors[name]}
-        helperText={errors[name]?.message ?? ""}
+        // helperText={errors[name]?.message ??  ""}
+        helperText={errors[name] ? errors[name].message : ""}
         {...register(name)}
         {...muiConfig}
       />
