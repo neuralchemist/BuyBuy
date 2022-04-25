@@ -32,7 +32,7 @@ function FilledCart() {
           justifyContent: "space-between",
         }}
       >
-        <Typography variant="h4">Subtotal: {`$${cart.subtotal}`}</Typography>
+        <Typography variant="h4">Subtotal: {`$${cart.subtotal.toFixed(2)}`}</Typography>
         <Box sx={{display: 'flex', flexDirection: {xs: 'column', sm: 'row'}}}>
           <Button
             size="medium"

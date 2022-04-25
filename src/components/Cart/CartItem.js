@@ -19,8 +19,6 @@ function CartItem({ item }) {
     <Card>
       <CardMedia
         component="img"
-        // sx={{ pt: "56.25%", border: '1px solid red' }}
-        // width='350px'
         height="260px"
         image={item.image}
         alt={item.name}

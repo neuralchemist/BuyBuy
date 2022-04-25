@@ -31,7 +31,7 @@ function Review() {
           <Typography
             variant="subtitle1"
             sx={{ fontWeight: "700" }}
-          >{`$${cart.subtotal}`}</Typography>
+          >{`$${cart.subtotal.toFixed(2)}`}</Typography>
         </ListItem>
       </List>
     </Box>

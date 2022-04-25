@@ -4,6 +4,8 @@ import Typography from "@mui/material/Typography";
 // custom components
 import EmptyCart from "./EmptyCart";
 import FilledCart from "./FilledCart";
+import ProductRecommendation from "../ProductRecommendation";
+import Toast from "../Toast";
 // custom context
 import { useCart } from "../../context/CartContext";
 
@@ -19,7 +21,11 @@ function Cart() {
       {isEmpty ? (
         <EmptyCart />
       ) : (
-        <FilledCart  />
+        <>
+          <FilledCart />
+          <ProductRecommendation />
+          <Toast />
+        </>
       )}
     </Container>
   );
