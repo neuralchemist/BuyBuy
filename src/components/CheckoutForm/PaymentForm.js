@@ -1,3 +1,4 @@
+import React from "react";
 // mui 5
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -8,7 +9,6 @@ import Review from "./Review";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import StripePayment from "./StripePayment";
-
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 

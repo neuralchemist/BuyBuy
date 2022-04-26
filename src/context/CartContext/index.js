@@ -1,5 +1,5 @@
+import React from 'react'
 import { useContext, createContext, useState } from "react";
-import { products } from "./dummyData";
 
 const cartContext = createContext(null);
 
@@ -14,6 +14,14 @@ export function CartProvider({ children }) {
     total_items: 0,
   });
   const [order, setOrder] = useState({});
+  const [open, setOpen] = useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
 
   const onAddToCart = (product) => {
     // find product if already in cart
@@ -31,7 +39,8 @@ export function CartProvider({ children }) {
         total_items: prev.total_items + 1,
       }));
     }
-
+    // show Toast message
+    setOpen(true);
   };
 
   const onEmptyCart = () => {
@@ -48,7 +57,6 @@ export function CartProvider({ children }) {
       subtotal: prev.subtotal - product.price * product.quantity,
       total_items: prev.total_items - product.quantity,
     }));
-
   };
 
   const onIncrementItemQuantity = (product) => {
@@ -59,7 +67,6 @@ export function CartProvider({ children }) {
       subtotal: prev.subtotal + product.price,
       total_items: prev.total_items + 1,
     }));
-
   };
 
   const onDecrementItemQuantity = (product) => {
@@ -73,19 +80,22 @@ export function CartProvider({ children }) {
         subtotal: prev.subtotal - product.price,
         total_items: prev.total_items - 1,
       }));
-
     }
   };
 
   const onSuccessfulCheckout = (newOrder) => {
-    setOrder({ ...newOrder, order_ref: `${newOrder.customer.firstname}_xyz123` });
+    setOrder({
+      ...newOrder,
+      order_ref: `${newOrder.customer.firstname}_xyz123`,
+    });
     onEmptyCart();
   };
 
   const value = {
-    products,
     cart,
     order,
+    open,
+    handleClose,
     onAddToCart,
     onEmptyCart,
     onRemoveItemFromCart,

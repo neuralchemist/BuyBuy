@@ -1,3 +1,4 @@
+import React from 'react'
 // custom components
 import Checkout from './Checkout';
 // custom context

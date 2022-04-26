@@ -1,3 +1,4 @@
+import React from "react";
 // mui5
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,6 +15,17 @@ import { useCart } from "../../context/CartContext";
 // custom routes
 import { CART, HOME } from "../../utils/routes";
 
+// custom style
+
+const hoverStyle = {
+  transition: "transform .4s ease",
+  cursor: "pointer",
+  ":hover": {
+    transform: "scale(1.1,1.1)",
+    color: "brown",
+  },
+};
+
 function Navbar() {
   const { cart } = useCart();
 
@@ -28,8 +40,15 @@ function Navbar() {
       }}
     >
       <Toolbar sx={{ flexWrap: "wrap" }}>
-        <Box sx={{ display: "flex", flexGrow: 1, alignItems: "center" }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexGrow: 1,
+            alignItems: "center",
+          }}
+        >
           <IconButton
+            sx={hoverStyle}
             aria-label="brand icon"
             color="inherit"
             component={Link}
@@ -38,8 +57,6 @@ function Navbar() {
             <StorefrontIcon />
           </IconButton>
           <Typography
-            component={Link}
-            to={HOME}
             variant="h6"
             color="inherit"
             noWrap
@@ -51,6 +68,7 @@ function Navbar() {
         <Box component="nav">
           {/* cart */}
           <IconButton
+            sx={hoverStyle}
             aria-label="Show cart items"
             color="inherit"
             component={Link}

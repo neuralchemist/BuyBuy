@@ -1,3 +1,4 @@
+import React from "react";
 // mui5
 import Grid from "@mui/material/Grid";
 import InputLabel from "@mui/material/InputLabel";
@@ -25,14 +26,16 @@ function SimpleSelect({ field, options, label, name, required }) {
   return (
     <FormControl {...muiConfig} error={!!errors[name]} required={required}>
       <InputLabel id="select-label">{label}</InputLabel>
-      <Select  labelId="select-label" {...field}>
+      <Select labelId="select-label" {...field}>
         {options.map((option) => (
           <MenuItem value={option.value} key={option.value}>
             {option.label}
           </MenuItem>
         ))}
       </Select>
-      <FormHelperText>{errors[name]?.message ?? ""}</FormHelperText>
+      <FormHelperText>
+        {errors[name] ? errors[name].message : ""}
+      </FormHelperText>
     </FormControl>
   );
 }

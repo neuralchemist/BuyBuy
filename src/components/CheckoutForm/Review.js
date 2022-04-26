@@ -1,3 +1,4 @@
+import React from "react";
 // mui 5
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -20,18 +21,17 @@ function Review() {
               primary={item.name}
               secondary={`Quantity: ${item.quantity}`}
             />
-            <Typography variant="body2">{`$${
-              item.price * item.quantity
-            }`}</Typography>
+            <Typography variant="body2">{`$${item.price *
+              item.quantity}`}</Typography>
           </ListItem>
         ))}
 
         <ListItem>
-          <ListItemText primary="Total" sx={{fontWeight: "700"}} />
+          <ListItemText primary="Total" sx={{ fontWeight: "700" }} />
           <Typography
             variant="subtitle1"
             sx={{ fontWeight: "700" }}
-          >{`$${cart.subtotal}`}</Typography>
+          >{`$${cart.subtotal.toFixed(2)}`}</Typography>
         </ListItem>
       </List>
     </Box>

@@ -1,3 +1,4 @@
+import React from "react";
 // mui 5
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
@@ -19,7 +20,7 @@ function Checkout() {
 
   return (
     <Container maxWidth="sm" component="main" sx={{ mt: 9 }}>
-      <Paper elevation={2}>
+      <Paper elevation={2} sx={{ p: 1 }}>
         <Typography variant="h4" align="center">
           Checkout
         </Typography>
@@ -39,5 +40,3 @@ function Checkout() {
 }
 
 export default Checkout;
-
-
