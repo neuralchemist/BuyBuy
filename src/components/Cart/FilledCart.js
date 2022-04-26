@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 // react-router
 import { useNavigate } from "react-router-dom";
 // custom components
-import CartItem from "./CartItem";
+import CartItemCard from "./CartItemCard";
 // custom context
 import { useCart } from "../../context/CartContext";
 // custom routes
@@ -20,8 +20,8 @@ function FilledCart() {
     <>
       <Grid container spacing={3}>
         {cart.items.map((item) => (
-          <Grid item xs={12} sm={4} key={item.id}>
-            <CartItem item={item} />
+          <Grid item xs={12} sm={4} md={3} key={item.id}>
+            <CartItemCard pokemon={item} />
           </Grid>
         ))}
       </Grid>
