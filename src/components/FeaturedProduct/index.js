@@ -3,9 +3,7 @@ import React from "react";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 // custom components
 import ErrorMessage from "../CommonComponents/ErrorMessage";
 // custom hooks
@@ -39,7 +37,7 @@ function FeaturedProduct() {
         backgroundColor: "grey.800",
         color: "#fff",
         mb: 4,
-        backgroundSize: "cover",
+        backgroundSize: "null",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundImage: `url(${featuredProductState.data.image})`,
@@ -83,9 +81,6 @@ function FeaturedProduct() {
             <Typography variant="h5" color="inherit" paragraph>
               {featuredProductState.data.description}
             </Typography>
-            <Button component={Link} to="#">
-              {featuredProductState.data.buttonText}
-            </Button>
           </Box>
         </Grid>
       </Grid>
