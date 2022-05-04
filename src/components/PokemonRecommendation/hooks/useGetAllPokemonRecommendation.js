@@ -31,7 +31,8 @@ function useGetAllPokemonRecommendation() {
           name: data.name,
           price: data.weight,
           image: data.sprites.front_shiny,
-          description: data.abilities.map((obj) => obj.ability.name).join(", "),
+          types: data.types.map((obj) => obj.type.name),
+          abilities: data.abilities.map((obj) => obj.ability.name),
         }))
       );
 
