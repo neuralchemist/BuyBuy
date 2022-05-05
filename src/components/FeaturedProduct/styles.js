@@ -2,10 +2,10 @@ import { styled } from "@mui/material/styles";
 // import Box from "@mui/system/Box";
 import Paper from "@mui/material/Paper";
 
-export const BannerPaper = styled(Paper)(({ theme, image }) => ({
+export const BannerContainer = styled(Paper)(({ theme, image }) => ({
   backgroundColor: theme.palette.primary.main,
   color: theme.palette.grey[900],
-  marginBottom: "24px",
+  // marginBottom: "24px",
   backgroundSize: "null",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",

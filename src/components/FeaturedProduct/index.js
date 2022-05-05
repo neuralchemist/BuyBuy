@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import ErrorMessage from "../CommonComponents/ErrorMessage";
 // custom hooks
 import useGetFeaturedProduct from "./hooks/useGetFeaturedProduct";
-import { BannerPaper } from "./styles";
+import { BannerContainer } from "./styles";
 
 function FeaturedProduct() {
   // custom hook
@@ -30,7 +30,7 @@ function FeaturedProduct() {
   }
 
   return (
-    <BannerPaper image={featuredProductState.data.image}>
+    <BannerContainer image={featuredProductState.data.image}>
       <Box
         sx={{
           p: { xs: 3, md: 6 },
@@ -43,7 +43,7 @@ function FeaturedProduct() {
           {featuredProductState.data.description}
         </Typography>
       </Box>
-    </BannerPaper>
+    </BannerContainer>
   );
 }
 
